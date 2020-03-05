@@ -53,7 +53,8 @@ class FIFO_Policy:
 
 class LIFO_Cycle_Policy: #TODO
     def __init__(self, c):
-        self.queue = c.seedURLs
+        self.queue = []
+        self.queue.append(c.seedURLs[0])
         self.fetched = c.URLs
 
     def getURL(self, c, iteration):
@@ -62,9 +63,10 @@ class LIFO_Cycle_Policy: #TODO
         #         self.queue.pop()
 
         if len(self.queue) == 0:
-            self.queue = c.seedURLs
-            self.fetched = []
-            return None
+            #self.queue = c.seedURLs
+            self.queue.append(c.seedURLs[0])
+            self.fetched.clear()
+            return self.queue.pop()
         else:
             popped = self.queue.pop()
             self.fetched.add(popped)

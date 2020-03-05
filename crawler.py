@@ -67,7 +67,7 @@ class LIFO_Cycle_Policy: #TODO
             return None
         else:
             popped = self.queue.pop()
-            self.fetched.append(popped)
+            self.fetched.add(popped)
             return popped
             
     def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
@@ -132,7 +132,7 @@ class Container:
          # Incoming URLs (to <- from; set of incoming links)
         self.incomingURLs = {}
         # Class which maintains a queue of urls to visit. 
-        self.generatePolicy = LIFO_Policy(self)
+        self.generatePolicy = LIFO_Cycle_Policy(self)
         # Page (URL) to be fetched next
         self.toFetch = None
         # Number of iterations of a crawler. 

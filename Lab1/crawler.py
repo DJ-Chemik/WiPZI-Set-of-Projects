@@ -8,7 +8,8 @@ import urllib.request as req
 import sys
 import os
 from html.parser import HTMLParser
-      
+import numpy as np
+
 #-------------------------------------------------------------------------
 ### generatePolicy classes
   
@@ -23,52 +24,76 @@ class Parser (HTMLParser):
 
 class LIFO_Policy:
     def __init__(self, c):
-        self.queue = []
-        self.queue.append(c.seedURLs[0])
+        self.queue = list(c.seedURLs)
 
     def getURL(self, c, iteration):
         if len(self.queue) == 0:
-            return None
-        else:
-            return self.queue.pop()
+            self.queue = list(c.seedURLs)
+        return self.queue.pop() 
             
     def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
         pList = list(retrievedURLs)
         pList.sort(key = lambda url: url[len(url) - url[::-1].index('/'):])
-        self.queue.extend(set(pList))
+        self.queue.extend(pList)
 
 class FIFO_Policy:
     def __init__(self, c):
-        self.queue = []
-        self.queue.append(c.seedURLs[0])
+        self.queue = list(c.seedURLs)
 
     def getURL(self, c, iteration):
         if len(self.queue) == 0:
-            return None
-        else:
-            return self.queue.pop(0)
+            self.queue = list(c.seedURLs)
+        return self.queue.pop(0)
             
     def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
         pList = list(retrievedURLs)
         pList.sort(key = lambda url: url[len(url) - url[::-1].index('/'):])
         self.queue.extend(set(pList))
 
-class LIFO_Cycle_Policy: #TODO
+class LIFO_Cycle_Policy:
     def __init__(self, c):
-        self.queue = []
-        self.queue.append(c.seedURLs[0])
-        self.fetched = c.URLs
+        self.queue = list(c.seedURLs)
+        self.fetched = set()
 
     def getURL(self, c, iteration):
-        # if len(self.queue) > 0:
-        #     if self.queue[-1] in self.fetched:
-        #         self.queue.pop()
+        while self.queue[-1] in self.fetched:
+            self.queue.pop()
+            if len(self.queue) == 0:
+                self.queue = list(c.seedURLs)
+                self.fetched.clear()
+        
+        popped = self.queue.pop()
+        self.fetched.add(popped)
+        return popped
+            
+    def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
+        pList = list(retrievedURLs)
+        pList.sort(key = lambda url: url[len(url) - url[::-1].index('/'):])
+        self.queue.extend(set(pList))
 
-        if len(self.queue) == 0:
-            #self.queue = c.seedURLs
-            self.queue.append(c.seedURLs[0])
-            self.fetched.clear()
-            return self.queue.pop()
+
+class LIFO_Authority_Policy:
+    def __init__(self, c):
+        self.queue = list(c.seedURLs)
+        self.fetched = set()
+        self.allDownloaded = False
+
+    def getURL(self, c, iteration):
+        if not self.allDownloaded:
+            while self.queue[-1] in self.fetched:
+                self.queue.pop()
+                if len(self.queue) == 0:
+                    self.allDownloaded = True
+                    break
+
+        if self.allDownloaded:
+            res = dict()
+            for val in c.incomingURLs:
+                res[val] = len(c.incomingURLs[val]) + 1
+            if len(res) > 0:
+                res_sum = sum(res.values())
+                prob = [i / res_sum for i in res.values()]
+                return np.random.choice(list(res.keys()), p = prob)
         else:
             popped = self.queue.pop()
             self.fetched.add(popped)
@@ -78,43 +103,6 @@ class LIFO_Cycle_Policy: #TODO
         pList = list(retrievedURLs)
         pList.sort(key = lambda url: url[len(url) - url[::-1].index('/'):])
         self.queue.extend(set(pList))
-
-
-class LIFO_Authority_Policy: # TODO
-    def __init__(self, c):
-        self.queue = []
-        self.queue.append(c.seedURLs[0])
-        self.fetched = c.URLs
-
-    def getURL(self, c, iteration):
-        # if len(self.queue) > 0:
-        #     if self.queue[-1] in self.fetched:
-        #         self.queue.pop()
-
-        if len(self.queue) == 0:
-            self.queue = c.seedURLs
-            self.fetched = []
-            return None
-        else:
-            popped = self.queue.pop()
-            self.fetched.append(popped)
-            return popped
-            
-    def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
-        pList = list(retrievedURLs)
-        pList.sort(key = lambda url: url[len(url) - url[::-1].index('/'):])
-        self.queue.extend(set(pList))
-  
-# Dummy fetch policy. Returns first element. Does nothing ;)
-class Dummy_Policy:
-    def getURL(self, c, iteration):
-        if len(c.URLs) == 0:
-            return None
-        else:
-            return c.seedURLs[0]
-            
-    def updateURLs(self, c, retrievedURLs, retrievedURLsWD, iteration):
-        pass
         
     
 #-------------------------------------------------------------------------
@@ -137,7 +125,7 @@ class Container:
          # Incoming URLs (to <- from; set of incoming links)
         self.incomingURLs = {}
         # Class which maintains a queue of urls to visit. 
-        self.generatePolicy = LIFO_Cycle_Policy(self)
+        self.generatePolicy = LIFO_Policy(self)
         # Page (URL) to be fetched next
         self.toFetch = None
         # Number of iterations of a crawler. 
@@ -159,7 +147,7 @@ class Container:
         
         
         # If True: debug
-        self.debug = True 
+        self.debug = True
         
 def main():
 
@@ -277,15 +265,13 @@ def fetch(c):
         return None 
         
 #-------------------------------------------------------------------------  
-# Remove wrong URL (TODO)
+# Remove wrong URL (TODO) DONE
 def removeWrongURL(c):
-    #TODO DONE
-    print('Wrong URL removed')
     c.URLs.remove(c.toFetch)
     
     
 #-------------------------------------------------------------------------  
-# Parse this page and retrieve text (whole page) and URLs (TODO)
+# Parse this page and retrieve text (whole page) and URLs (TODO) DONE
 def parse(c, page, iteration):
     # data to be saved (DONE)
     htmlData = page.read()
@@ -299,13 +285,13 @@ def parse(c, page, iteration):
     return htmlData, retrievedURLs
 
 #-------------------------------------------------------------------------  
-# Normalise newly obtained links (TODO) ~DONE
+# Normalise newly obtained links (TODO) DONE
 def getNormalisedURLs(retrievedURLs):
     normalisedRetrievedURLs = []
     for elem in retrievedURLs:
         normalisedRetrievedURLs.append(elem.lower())  
-    print('Links normalised')
-    return normalisedRetrievedURLs
+    retrievedURLs = set(normalisedRetrievedURLs)
+    return retrievedURLs
     
 #-------------------------------------------------------------------------  
 # Remove duplicates (duplicates) (TODO) DONE
@@ -319,21 +305,13 @@ def removeDuplicates(c, retrievedURLs):
     return retrievedURLs
 
 #-------------------------------------------------------------------------  
-# Filter out some URLs (TODO) ~DONE
+# Filter out some URLs (TODO) DONE
 def getFilteredURLs(c, retrievedURLs):
     toLeft = set([url for url in retrievedURLs if url.lower().startswith(c.rootPage)])
-    print("<<<--- OLD SET --->>>")
-    for x in toLeft:
-        print(x)
-    print("<<<--- OLD SET--->>>")
     if c.toFetch in toLeft:
         toLeft.remove(c.toFetch)
     if c.debug:
         print("   Filtered out " + str(len(retrievedURLs) - len(toLeft)) + " urls") 
-    print("<<<--- NEW FILTERED SET--->>>")
-    for x in toLeft:
-        print(x)
-    print("<<<--- NEW FILTERED SET--->>>") 
     return toLeft
     
 #-------------------------------------------------------------------------  

@@ -23,7 +23,8 @@ class Parser (HTMLParser):
 
 class LIFO_Policy:
     def __init__(self, c):
-        self.queue = c.seedURLs
+        self.queue = []
+        self.queue.append(c.seedURLs[0])
 
     def getURL(self, c, iteration):
         if len(self.queue) == 0:
@@ -38,7 +39,8 @@ class LIFO_Policy:
 
 class FIFO_Policy:
     def __init__(self, c):
-        self.queue = c.seedURLs
+        self.queue = []
+        self.queue.append(c.seedURLs[0])
 
     def getURL(self, c, iteration):
         if len(self.queue) == 0:
@@ -80,7 +82,8 @@ class LIFO_Cycle_Policy: #TODO
 
 class LIFO_Authority_Policy: # TODO
     def __init__(self, c):
-        self.queue = c.seedURLs
+        self.queue = []
+        self.queue.append(c.seedURLs[0])
         self.fetched = c.URLs
 
     def getURL(self, c, iteration):

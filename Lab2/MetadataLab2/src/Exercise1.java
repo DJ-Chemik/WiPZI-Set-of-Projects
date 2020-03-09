@@ -3,8 +3,12 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.LinkedList;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 public class Exercise1 {
     public static void main(String[] args) throws IOException, ParserConfigurationException,
@@ -28,7 +32,12 @@ public class Exercise1 {
         System.out.println("Running exercise 1a...");
         LinkedList<String> results = new LinkedList<>();
 
-        // TODO
+        ZipFile file = new ZipFile("Exercise1.zip");
+        Enumeration entries = file.entries();
+        while (entries.hasMoreElements()){
+            ZipEntry entry = (ZipEntry) entries.nextElement();
+            InputStream stream = file.getInputStream(entry);
+        }
 
         return results;
     }

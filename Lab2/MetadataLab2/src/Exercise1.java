@@ -1,6 +1,10 @@
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.apache.tika.sax.PhoneExtractingContentHandler;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -8,10 +12,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.LinkedList;
@@ -34,7 +35,7 @@ public class Exercise1 {
 
         LinkedList<String> phonesByTika = exercise1b();
         System.out.println("Results of Tika:");
-        //printResults(phonesByTika);
+        printResults(phonesByTika);
     }
 
 
@@ -76,10 +77,14 @@ public class Exercise1 {
 
     private LinkedList<String> exercise1b() throws IOException, TikaException, SAXException {
         System.out.println("Running exercise 1b...");
-        LinkedList<String> results = new LinkedList<>();
-        // TODO
 
-        return new LinkedList<>(results);
+        AutoDetectParser parser = new AutoDetectParser();
+        Metadata meta = new Metadata();
+        InputStream stream = new FileInputStream("Exercise1.zip");
+        PhoneExtractingContentHandler phoneExtractingContentHandler = new PhoneExtractingContentHandler(new BodyContentHandler(), meta);
+        parser.parse(stream, phoneExtractingContentHandler, meta);
+
+        return new LinkedList<>(Arrays.asList(meta.getValues("phonenumbers")));
     }
 
 

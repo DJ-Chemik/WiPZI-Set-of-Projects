@@ -1,14 +1,26 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
+import org.apache.james.mime4j.internal.ParserStreamContentHandler;
+import org.apache.james.mime4j.parser.ContentHandler;
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
+import org.apache.tika.io.IOUtils;
 import org.apache.tika.langdetect.OptimaizeLangDetector;
+import org.apache.tika.language.LanguageIdentifier;
+import org.apache.tika.language.detect.LanguageDetector;
+import org.apache.tika.language.detect.LanguageHandler;
+import org.apache.tika.language.detect.LanguageResult;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 
 public class Exercise2
@@ -50,14 +62,27 @@ public class Exercise2
     private void initLangDetector() throws IOException
     {
         // TODO initialize language detector (langDetector)
+        langDetector = new OptimaizeLangDetector();
     }
 
     private void processFile(File file) throws IOException, SAXException, TikaException
     {
+
         // TODO: extract content, metadata and language from given file
         // call saveResult method to save the data
 
-        saveResult(file.getName(), null, null, null, null, null, null); //TODO: fill with proper values
+
+        Parser parser = new AutoDetectParser();
+        BodyContentHandler handler = new BodyContentHandler(-1);
+        Metadata metadata = new Metadata();
+        FileInputStream content = new FileInputStream(file);
+
+        parser.parse(content,handler,metadata,new ParseContext());
+        LanguageIdentifier li = new LanguageIdentifier(handler.toString());
+        String languageCode = li.toString().substring(0,2);
+        
+
+        saveResult(file.getName(), languageCode, null, null, null, null, null); //TODO: fill with proper values
     }
 
     private void saveResult(String fileName, String language, String creatorName, Date creationDate,

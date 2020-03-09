@@ -1,4 +1,5 @@
 # Author: Michal Tomczyk
+# Author: Michal Tomczyk
 # michal.tomczyk@cs.put.poznan.pl
 # Poznan University of Technology
 # Institute of Computing Science

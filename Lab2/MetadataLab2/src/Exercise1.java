@@ -1,12 +1,18 @@
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.tika.exception.TikaException;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -34,9 +40,22 @@ public class Exercise1 {
 
         ZipFile file = new ZipFile("Exercise1.zip");
         Enumeration entries = file.entries();
-        while (entries.hasMoreElements()){
+        while (entries.hasMoreElements()) {
             ZipEntry entry = (ZipEntry) entries.nextElement();
             InputStream stream = file.getInputStream(entry);
+            if (entry.getName().equals("names.pdf")) {
+                PDFTextStripper stripper = new PDFTextStripper();
+                String text = stripper.getText(PDDocument.load(stream));
+
+                Pattern pattern = Pattern.compile("\\([0-9]{3}\\) ?[0-9-]+");
+                Matcher matcher = pattern.matcher(text);
+                String number;
+                while (matcher.find()) {
+                    number = matcher.group();
+                    results.add(number);
+                }
+
+            }
         }
 
         return results;

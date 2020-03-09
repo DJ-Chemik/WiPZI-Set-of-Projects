@@ -1,8 +1,12 @@
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.tika.exception.TikaException;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,6 +59,15 @@ public class Exercise1 {
                     results.add(number);
                 }
 
+            }else{
+                DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+                DocumentBuilder db = dbf.newDocumentBuilder();
+                Document document = db.parse(stream);
+                NodeList nodeList = document.getElementsByTagName("Phone");
+                int length = nodeList.getLength();
+                for (int i=0;i<length;i++){
+                    results.add(nodeList.item(i).getTextContent());
+                }
             }
         }
 

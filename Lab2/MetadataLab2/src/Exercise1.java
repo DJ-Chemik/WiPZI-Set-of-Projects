@@ -44,11 +44,13 @@ public class Exercise1 {
         LinkedList<String> results = new LinkedList<>();
 
         ZipFile file = new ZipFile("Exercise1.zip");
-        Enumeration entries = file.entries();
+        Enumeration<? extends ZipEntry> entries = file.entries();
+
         while (entries.hasMoreElements()) {
-            ZipEntry entry = (ZipEntry) entries.nextElement();
+            ZipEntry entry = entries.nextElement();
             InputStream stream = file.getInputStream(entry);
-            if (entry.getName().equals("names.pdf")) {
+
+            if (entry.getName().endsWith(".pdf")) {
                 PDFTextStripper stripper = new PDFTextStripper();
                 String text = stripper.getText(PDDocument.load(stream));
 
@@ -59,14 +61,14 @@ public class Exercise1 {
                     number = matcher.group();
                     results.add(number);
                 }
-
-            }else{
+            }
+            else if (entry.getName().endsWith(".xml")) {
                 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                 DocumentBuilder db = dbf.newDocumentBuilder();
                 Document document = db.parse(stream);
                 NodeList nodeList = document.getElementsByTagName("Phone");
-                int length = nodeList.getLength();
-                for (int i=0;i<length;i++){
+
+                for (int i = 0; i < nodeList.getLength(); i++) {
                     results.add(nodeList.item(i).getTextContent());
                 }
             }

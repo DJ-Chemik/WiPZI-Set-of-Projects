@@ -66,64 +66,30 @@ public class Exercise2
 
     private void initLangDetector() throws IOException
     {
-        // TODO initialize language detector (langDetector)
         langDetector = new OptimaizeLangDetector();
+        langDetector.loadModels();
     }
 
     private void processFile(File file) throws IOException, SAXException, TikaException, ParseException {
         Parser parser = new AutoDetectParser();
-        MediaType mediaType;
         BodyContentHandler handler = new BodyContentHandler(-1);
         Metadata metadata = new Metadata();
-        FileInputStream content = new FileInputStream(file);
+        FileInputStream inputStream = new FileInputStream(file);
+        ParseContext context = new ParseContext();
 
-        parser.parse(content,handler,metadata,new ParseContext());
-        LanguageIdentifier li = new LanguageIdentifier(handler.toString());
-        String languageCode = li.toString().substring(0,2);
-
-        String author = null;
-        Date creationDate = null;
-        Date lastModificationDate = null;
-
-        ArrayList<String> authors = new ArrayList<>(Arrays.asList(metadata.getValues(Metadata.AUTHOR)));
-        ArrayList<String> createDates = new ArrayList<>(Arrays.asList(metadata.getValues(Metadata.CREATION_DATE)));
-        ArrayList<String> lastModificationDates = new ArrayList<>(Arrays.asList(metadata.getValues(Metadata.MODIFIED)));
+        parser.parse(inputStream, handler, metadata, context);
+        LanguageResult language = langDetector.detect(handler.toString());
 
         Tika tika = new Tika();
         tika.setMaxStringLength(-1);
         String mimeType = tika.detect(file);
+        String content = tika.parseToString(file);
 
-
-        if (authors.size()>0){
-            author=authors.get(0);
-        }else{
-            author="";
-        }
-        if (createDates.size()>0) {
-            creationDate = new SimpleDateFormat(DATE_FORMAT).parse(createDates.get(0));
-        }
-        if (lastModificationDates.size()>0) {
-            lastModificationDate = new SimpleDateFormat(DATE_FORMAT).parse(lastModificationDates.get(0));
-        }
-
-
-        // TODO: 09.03.2020 How to write all file to String???
-        String finishContent = null;
-
-
-
-        saveResult(file.getName(), languageCode, author, creationDate, lastModificationDate, mimeType, finishContent);
-    }
-
-    private String getFileContent( FileInputStream fis ) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        Reader r = new InputStreamReader(fis, "UTF-8");  //or whatever encoding
-        int ch = r.read();
-        while(ch >= 0) {
-            sb.append(ch);
-            ch = r.read();
-        }
-        return sb.toString();
+        saveResult(file.getName(), language.getLanguage(),
+                metadata.get(Metadata.AUTHOR),
+                metadata.getDate(Metadata.CREATION_DATE),
+                metadata.getDate(Metadata.LAST_MODIFIED),
+                mimeType, content);
     }
 
     private void saveResult(String fileName, String language, String creatorName, Date creationDate,

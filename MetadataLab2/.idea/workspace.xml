@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33544201-74cf-44ac-9f0e-494f58af47fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/MetadataLab2$Exercise1.ic" NAME="Exercise1 Coverage Results" MODIFIED="1583740634129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectId" id="1YvwDQD3KlQqO3kCuPcMj6YUTeu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583788822899" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.Exercise2">
+    <configuration name="Exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise1" />
+      <module name="MetadataLab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise2" />
+      <module name="MetadataLab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MetadataLab2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Exercise1" />
+      <item itemvalue="Application.Exercise2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exercise2" />
+        <item itemvalue="Application.Exercise1" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33544201-74cf-44ac-9f0e-494f58af47fa" name="Default Changelist" comment="" />
+      <created>1583738865803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583738865803</updated>
+      <workItem from="1583757926838" duration="2249000" />
+      <workItem from="1583836257562" duration="7052000" />
+    </task>
+    <task id="LOCAL-00001" summary="lab2 done">
+      <created>1583843045892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583843045892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab2 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab2 done" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="276" y="44" key="CommitChangelistDialog2" timestamp="1583843042015">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="276" y="44" key="CommitChangelistDialog2/0.0.1676.902@0.0.1676.902" timestamp="1583843042015" />
+    <state width="1632" height="291" key="GridCell.Tab.0.bottom" timestamp="1583844877559">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1583760196458" />
+    <state width="1632" height="291" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1583844877559" />
+    <state width="1632" height="291" key="GridCell.Tab.0.center" timestamp="1583844877558">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1583760196458" />
+    <state width="1632" height="291" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1583844877558" />
+    <state width="1632" height="291" key="GridCell.Tab.0.left" timestamp="1583844877558">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1583760196458" />
+    <state width="1632" height="291" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1583844877558" />
+    <state width="1632" height="291" key="GridCell.Tab.0.right" timestamp="1583844877558">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1397" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1583760196458" />
+    <state width="1632" height="291" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1583844877558" />
+    <state width="1632" height="291" key="GridCell.Tab.1.bottom" timestamp="1583844877559">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="291" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1583844877559" />
+    <state width="1632" height="291" key="GridCell.Tab.1.center" timestamp="1583844877559">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="291" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1583844877559" />
+    <state width="1632" height="291" key="GridCell.Tab.1.left" timestamp="1583844877559">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="291" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1583844877559" />
+    <state width="1632" height="291" key="GridCell.Tab.1.right" timestamp="1583844877559">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="291" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1583844877559" />
+    <state x="429" y="173" key="Vcs.Push.Dialog.v2" timestamp="1583843056540">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="429" y="173" key="Vcs.Push.Dialog.v2/0.0.1676.902@0.0.1676.902" timestamp="1583843056540" />
+    <state x="377" y="211" key="run.anything.popup" timestamp="1583758576094">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="377" y="211" key="run.anything.popup/0.0.1440.920@0.0.1440.920" timestamp="1583758576094" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MetadataLab2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

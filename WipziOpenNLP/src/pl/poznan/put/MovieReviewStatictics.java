@@ -1,3 +1,5 @@
+package pl.poznan.put;
+
 import opennlp.tools.lemmatizer.DictionaryLemmatizer;
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;

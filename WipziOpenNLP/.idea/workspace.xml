@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36b2736f-1fe5-4574-911b-5f52f2e64d38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Materials/MovieReviewStatictics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,47 +61,92 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="153" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="153" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/OpenNLP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="180" selection-start-line="180" selection-end-line="180" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#OpenNLP#0" />
-                <element signature="method#languageDetection#0;class#OpenNLP#0" />
-                <element signature="method#sentenceDetection#0;class#OpenNLP#0" />
-                <element signature="method#posTagging#0;class#OpenNLP#0" />
-                <element signature="method#lemmatization#0;class#OpenNLP#0" />
-                <element signature="method#stemming#0;class#OpenNLP#0" />
-                <element signature="method#chunking#0;class#OpenNLP#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/OpenNLP.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="180" selection-start-line="180" selection-end-line="180" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#main#0;class#OpenNLP#0" />
+                    <element signature="method#languageDetection#0;class#OpenNLP#0" />
+                    <element signature="method#sentenceDetection#0;class#OpenNLP#0" />
+                    <element signature="method#posTagging#0;class#OpenNLP#0" />
+                    <element signature="method#lemmatization#0;class#OpenNLP#0" />
+                    <element signature="method#stemming#0;class#OpenNLP#0" />
+                    <element signature="method#chunking#0;class#OpenNLP#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+                  <folding>
+                    <element signature="method#main#0;class#MovieReviewStatictics#0" />
+                    <element signature="method#run#0;class#MovieReviewStatictics#0" />
+                    <element signature="method#saveResults#0;class#MovieReviewStatictics#0" />
+                    <element signature="method#saveNamedEntities#0;class#MovieReviewStatictics#0" />
+                    <element signature="method#overallStatistics#0;class#MovieReviewStatictics#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/OpenNLP.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="483">
+                  <caret line="236" column="37" lean-forward="true" selection-start-line="236" selection-start-column="37" selection-end-line="236" selection-end-column="84" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#main#0;class#OpenNLP#0" />
+                    <element signature="method#languageDetection#0;class#OpenNLP#0" />
+                    <element signature="method#tokenization#0;class#OpenNLP#0" />
+                    <element signature="method#sentenceDetection#0;class#OpenNLP#0" />
+                    <element signature="method#posTagging#0;class#OpenNLP#0" />
+                    <element signature="method#lemmatization#0;class#OpenNLP#0" />
+                    <element signature="method#stemming#0;class#OpenNLP#0" />
+                    <element signature="method#chunking#0;class#OpenNLP#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -116,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1047" />
@@ -133,6 +177,11 @@
             <path>
               <item name="WipziOpenNLP" type="b2602c69:ProjectViewProjectNode" />
               <item name="WipziOpenNLP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WipziOpenNLP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WipziOpenNLP" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WipziOpenNLP" type="b2602c69:ProjectViewProjectNode" />
@@ -154,7 +203,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584395155230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584450777349" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -239,10 +288,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2941653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14427663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -251,11 +300,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33296824" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.24295011" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
@@ -293,8 +342,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        <state relative-caret-position="330">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="method#main#0;class#MovieReviewStatictics#0" />
+            <element signature="method#run#0;class#MovieReviewStatictics#0" />
+            <element signature="method#saveResults#0;class#MovieReviewStatictics#0" />
+            <element signature="method#saveNamedEntities#0;class#MovieReviewStatictics#0" />
+            <element signature="method#overallStatistics#0;class#MovieReviewStatictics#0" />
+          </folding>
         </state>
       </provider>
     </entry>

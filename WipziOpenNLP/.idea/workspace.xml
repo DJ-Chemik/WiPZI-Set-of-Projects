@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36b2736f-1fe5-4574-911b-5f52f2e64d38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WipziOpenNLP/pl/poznan/put/MovieReviewStatictics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WipziOpenNLP/pl/poznan/put/MovieReviewStatictics.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statistics.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,22 +63,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="153" />
+          <entry key="java" value="1058" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="153" />
+          <entry key="JAVA" value="1058" />
         </counts>
       </usages-collector>
     </session>
@@ -107,11 +111,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+                <state relative-caret-position="335">
+                  <caret line="196" column="28" lean-forward="true" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
                   <folding>
                     <element signature="method#main#0;class#MovieReviewStatictics#0" />
-                    <element signature="method#run#0;class#MovieReviewStatictics#0" />
+                    <element signature="method#initModelsStemmerLemmatizer#0;class#MovieReviewStatictics#0" />
                     <element signature="method#saveResults#0;class#MovieReviewStatictics#0" />
                     <element signature="method#saveNamedEntities#0;class#MovieReviewStatictics#0" />
                     <element signature="method#overallStatistics#0;class#MovieReviewStatictics#0" />
@@ -127,18 +131,18 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/OpenNLP.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="236" column="37" lean-forward="true" selection-start-line="236" selection-start-column="37" selection-end-line="236" selection-end-column="84" />
+                <state relative-caret-position="643">
+                  <caret line="220" column="50" selection-start-line="220" selection-start-column="50" selection-end-line="220" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#main#0;class#OpenNLP#0" />
                     <element signature="method#languageDetection#0;class#OpenNLP#0" />
                     <element signature="method#tokenization#0;class#OpenNLP#0" />
                     <element signature="method#sentenceDetection#0;class#OpenNLP#0" />
-                    <element signature="method#posTagging#0;class#OpenNLP#0" />
                     <element signature="method#lemmatization#0;class#OpenNLP#0" />
                     <element signature="method#stemming#0;class#OpenNLP#0" />
                     <element signature="method#chunking#0;class#OpenNLP#0" />
+                    <element signature="method#nameFinding#0;class#OpenNLP#0" />
                   </folding>
                 </state>
               </provider>
@@ -203,10 +207,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584450777349" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584457832975" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -291,7 +295,7 @@
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14427663" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14427663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -300,11 +304,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.24295011" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.24295011" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
@@ -323,6 +327,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/opennlp-tools-1.8.3.jar!/opennlp/tools/stemmer/PorterStemmer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="420" selection-start-line="420" selection-end-line="420" />
+          <folding>
+            <element signature="e#10909#10910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/OpenNLP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -342,11 +356,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/poznan/put/MovieReviewStatictics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="335">
+          <caret line="196" column="28" lean-forward="true" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
           <folding>
             <element signature="method#main#0;class#MovieReviewStatictics#0" />
-            <element signature="method#run#0;class#MovieReviewStatictics#0" />
+            <element signature="method#initModelsStemmerLemmatizer#0;class#MovieReviewStatictics#0" />
             <element signature="method#saveResults#0;class#MovieReviewStatictics#0" />
             <element signature="method#saveNamedEntities#0;class#MovieReviewStatictics#0" />
             <element signature="method#overallStatistics#0;class#MovieReviewStatictics#0" />

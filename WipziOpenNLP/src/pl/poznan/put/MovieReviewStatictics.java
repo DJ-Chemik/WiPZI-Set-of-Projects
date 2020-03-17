@@ -19,10 +19,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -92,7 +89,6 @@ public class MovieReviewStatictics {
     private void initModelsStemmerLemmatizer() {
 
 
-
         try {
             //TO DO: load all OpenNLP models (+Porter stemmer + lemmatizer) from files (use class variables)
 
@@ -138,30 +134,71 @@ public class MovieReviewStatictics {
         // ------------------------------------------------------------------
 
         // TODO derive sentences (update noSentences variable)
-
+        SentenceDetectorME detector = new SentenceDetectorME(_sentenceModel);
+        List<String> sentences = new ArrayList<>(Arrays.asList(detector.sentDetect(text)));
+        noSentences = sentences.size();
 
         // TODO derive tokens and POS tags from text
         // (update noTokens and _totalTokensCount)
+        TokenizerME tokenizer = new TokenizerME(_tokenizerModel);
+        String[] tokensArray = tokenizer.tokenize(text);
+        List<String> tokens = new ArrayList<>(Arrays.asList(tokensArray));
+        noTokens = tokens.size();
+        _totalTokensCount += tokens.size();
 
         // TODO perform stemming (use derived tokens)
         // (update noStemmed)
-        //Set <String> stems = new HashSet <>();
+        //use .toLowerCase().replaceAll("[^a-z0-9]", ""); thereafter, ignore "" tokens
+        Set<String> stems = new HashSet<>();
 
-        //for (String token : tokens)
-        //{
-        // use .toLowerCase().replaceAll("[^a-z0-9]", ""); thereafter, ignore "" tokens
-        //}
+        for (String token : tokens) {
+            String stem = _stemmer.stem(token).toLowerCase().replaceAll("[^a-z0-9]", "");
+            if (!stem.equals("")){
+                stems.add(stem);
+            }
+        }
+        noStemmed=stems.size();
 
 
         // TODO perform lemmatization (use derived tokens)
         // (remove "O" from results - non-dictionary forms, update noWords)
+        POSTaggerME tagger = new POSTaggerME(_posModel);
+        String[] tagsArray = tagger.tag(tokensArray);
+        List<String> tags = new ArrayList<>(Arrays.asList(tagsArray));
 
+        String[] lematsArray = _lemmatizer.lemmatize(tokensArray,tagsArray);
+        List<String> lemats = new ArrayList<>(Arrays.asList(lematsArray));
+        Set<String> lematsSet = new HashSet<>(lemats);
+        lemats = new ArrayList<>(lematsSet);
+        for (int i = 0; i < lemats.size(); i++) {
+            if (lemats.get(i).equals("O")){
+                lemats.remove(i);
+                break;
+            }
+        }
+        noWords=lemats.size();
 
         // TODO derive people, locations, organisations (use tokens),
         // (update people, locations, organisations lists).
 
+        NameFinderME peopleFinder = new NameFinderME(_peopleModel);
+        NameFinderME placeFinder = new NameFinderME(_placesModel);
+        NameFinderME organizationFinder = new NameFinderME(_organizationsModel);
+
+        people =peopleFinder.find(tokensArray);
+        locations =placeFinder.find(tokensArray);
+        organisations =organizationFinder.find(tokensArray);
+
+
         // TODO update overall statistics - use tags and check first letters
         // (see https://www.clips.uantwerpen.be/pages/mbsp-tags; first letter = "V" = verb?)
+        _verbCount = 0;
+        _nounCount = 0;
+        _adjectiveCount = 0;
+        _adverbCount = 0;
+        _totalTokensCount = 0;
+
+
 
         // ------------------------------------------------------------------
 
@@ -170,9 +207,9 @@ public class MovieReviewStatictics {
         saveResults("Stemmed forms (unique)", noStemmed);
         saveResults("Words from a dictionary (unique)", noWords);
 
-        saveNamedEntities("People", people, new String[]{});
-        saveNamedEntities("Locations", locations, new String[]{});
-        saveNamedEntities("Organizations", organisations, new String[]{});
+        saveNamedEntities("People", people, tokensArray);
+        saveNamedEntities("Locations", locations, tokensArray);
+        saveNamedEntities("Organizations", organisations, tokensArray);
     }
 
 

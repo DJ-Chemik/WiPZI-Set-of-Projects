@@ -192,11 +192,24 @@ public class MovieReviewStatictics {
 
         // TODO update overall statistics - use tags and check first letters
         // (see https://www.clips.uantwerpen.be/pages/mbsp-tags; first letter = "V" = verb?)
-        _verbCount = 0;
-        _nounCount = 0;
-        _adjectiveCount = 0;
-        _adverbCount = 0;
-        _totalTokensCount = 0;
+//        _verbCount = 0;
+//        _nounCount = 0;
+//        _adjectiveCount = 0;
+//        _adverbCount = 0;
+        //_totalTokensCount = 0;
+
+        for (String tag : tags){
+            if (tag.equals("VB") || tag.equals("VBZ") || tag.equals("VBP") || tag.equals("VBD") ||
+                    tag.equals("VBN") || tag.equals("VBG")){
+                _verbCount++;
+            }else if (tag.equals("NN") || tag.equals("NNS") || tag.equals("NNP") || tag.equals("NNPS")){
+                _nounCount++;
+            }else if (tag.equals("JJ") || tag.equals("JJR") || tag.equals("JJS")){
+                _adjectiveCount++;
+            }else if (tag.equals("RB") || tag.equals("RBR") || tag.equals("RBS") || tag.equals("RP")){
+                _adverbCount++;
+            }
+        }
 
 
 

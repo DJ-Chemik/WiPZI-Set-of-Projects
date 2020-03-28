@@ -1,5 +1,5 @@
 import numpy as np
-
+# macierz sasiedztwa stron
 #L1  = [0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
 L1  = [0, 1, 1, 0, 1, 0, 0, 0, 0, 0]
 L2  = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
@@ -15,6 +15,9 @@ L10 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 L = np.array([L1, L2, L3, L4, L5, L6, L7, L8, L9, L10])
 
+# a - wektor organow
+# h - wektor hubów
+
 ITERATIONS = 100
 
 def getM(L):
@@ -23,6 +26,7 @@ def getM(L):
     c = np.zeros([10], dtype=int)
     
     ## TODO 1 compute the stochastic matrix M
+    # co tutaj niby trzeba zmienic?
     for i in range(0, 10):
         c[i] = sum(L[i])
     
@@ -45,23 +49,59 @@ print(M)
 ### TODO 2: compute pagerank with damping factor q = 0.15
 ### Then, sort and print: (page index (first index = 1 add +1) : pagerank)
 ### (use regular array + sort method + lambda function)
+
+
 print("PAGERANK")
 
 q = 0.15
-
+v = np.full(len(L), 1/len(L))
 pr = np.zeros([10], dtype=float)
-    
+c = np.zeros([10], dtype=int)
+
+for i in range(0, 10):
+    c[i] = sum(L[i])
+
+for i in range(0, 10):
+    jsum = 0.0
+    for j in range(0, 10):
+        if L[j][i] == 1:
+            jsum += v[j] / c[j]
+    pr[i] = v[i] = q + (1 - q) * jsum
+
+np.sort(pr)
+
+for i, x in enumerate(pr):
+    print("page " + str(i + 1) + ": " + str(x))
+
 ### TODO 3: compute trustrank with damping factor q = 0.15
 ### Documents that are good = 1, 2 (indexes = 0, 1)
 ### Then, sort and print: (page index (first index = 1, add +1) : trustrank)
 ### (use regular array + sort method + lambda function)
 print("TRUSTRANK (DOCUMENTS 1 AND 2 ARE GOOD)")
+def todo3():
+    q = 0.15
+    d = np.zeros([10], dtype=float)
+    d[0] = d[1] = 1
+    d = d / sum(d)
+    tr = [v for v in d]
+    exit(1) # !!!!
+    for i in range(0, 10):
+        jsum = 0.0
+        for j in range(0, 10):
+            if L[j][i] == 1:
+                jsum += d[j] / c[j]
+        # tr[i] = d[i] = q * d + (1 - q) * jsum
+        # o co chodzi z tym "d" wyzej
 
-q = 0.15
+    np.sort(pr)
 
-d = np.zeros([10], dtype=float)
+    for i, x in enumerate(tr):
+        print("page " + str(i + 1) + ": " + str(x))
 
-tr = [v for v in d]
-    
 ### TODO 4: Repeat TODO 3 but remove the connections 3->7 and 1->5 (indexes: 2->6, 0->4) 
 ### before computing trustrank
+
+L[2][6] = 0
+L[0][4] = 0
+
+todo3()

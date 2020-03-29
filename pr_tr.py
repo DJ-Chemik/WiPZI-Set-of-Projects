@@ -79,6 +79,8 @@ def todo3():
     for i in range(0, ITERATIONS):
         tr = np.copy(q * dd + (1 - q) * M @ tr)
 
+    tr = tr / sum(tr)
+
     trSorted = sorted([(i + 1, tr[i]) for i in range(len(tr))], reverse=True, key=lambda x: x[1])
     
     for i, x in trSorted:

@@ -1,5 +1,5 @@
 import numpy as np
-# macierz sasiedztwa stron
+
 #L1  = [0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
 L1  = [0, 1, 1, 0, 1, 0, 0, 0, 0, 0]
 L2  = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
@@ -15,9 +15,6 @@ L10 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 L = np.array([L1, L2, L3, L4, L5, L6, L7, L8, L9, L10])
 
-# a - wektor organow
-# h - wektor hubów
-
 ITERATIONS = 100
 
 def getM(L):
@@ -26,7 +23,6 @@ def getM(L):
     c = np.zeros([10], dtype=int)
     
     ## TODO 1 compute the stochastic matrix M
-    # co tutaj niby trzeba zmienic?
     for i in range(0, 10):
         c[i] = sum(L[i])
     
@@ -35,7 +31,7 @@ def getM(L):
             if L[j][i] == 0: 
                 M[i][j] = 0
             else:
-                M[i][j] = 1.0/c[j]
+                M[i][j] = 1.0 / c[j]
     return M
     
 print("Matrix L (indices)")
@@ -50,82 +46,53 @@ print(M)
 ### Then, sort and print: (page index (first index = 1 add +1) : pagerank)
 ### (use regular array + sort method + lambda function)
 
-
-print("PAGERANK")
+print("\nPAGERANK")
 
 q = 0.15
-pr = np.zeros([10], dtype=float)
-v = np.full(len(L), 1/len(L))
-c = np.zeros([10], dtype=int)
+pr = np.full(10, 1.0 / 10.0)
 
-for i in range(0, 10):
-    c[i] = sum(L[i])
+for i in range(0, ITERATIONS):
+    pr = np.copy(q + (1 - q) * M @ pr)
 
-for i in range(0, 10):
-    jsum = 0.0
-    for j in range(0, 10):
-        if L[j][i] == 1:
-            jsum += v[j] / c[j]
-    pr[i] = v[i] = q + (1 - q) * jsum
+pr = pr / sum(pr)
+prSorted = sorted([(i + 1, pr[i]) for i in range(len(pr))], reverse=True, key=lambda x: x[1])
 
-# OLD Method of sort (from index 1 to 10)
-# np.sort(pr)
-# for i, x in enumerate(pr):
-    # print("page " + str(i + 1) + ": " + str(x))
-
-# NEW Method of sort (from the highest to the lowest values)
-prSorted = sorted([(i + 1, pr[i]) for i in range(len(pr))],reverse=True, key=lambda x: x[1])
 for i, x in prSorted:
-    print("page " + str(i + 1) + ": " + str(x))
+    print("page " + str(i) + ": " + str(x))
 
 ### TODO 3: compute trustrank with damping factor q = 0.15
 ### Documents that are good = 1, 2 (indexes = 0, 1)
 ### Then, sort and print: (page index (first index = 1, add +1) : trustrank)
 ### (use regular array + sort method + lambda function)
-print("TRUSTRANK (DOCUMENTS 1 AND 2 ARE GOOD)")
+
+print("\nTRUSTRANK (DOCUMENTS 1 AND 2 ARE GOOD)")
+
 def todo3():
     q = 0.15
     d = np.zeros([10], dtype=float)
     d[0] = d[1] = 1
-    d = d / sum(d)
-    tr = [v for v in d]
-    # exit(1) # !!!!
-    for i in range(0, 10):
-        jsum = 0.0
-        for j in range(0, 10):
-            if L[j][i] == 1:
-                jsum += d[j] / c[j]
-        # tr[i] = d[i] = q * d + (1 - q) * jsum
-        # o co chodzi z tym "d" wyzej
 
-    np.sort(pr)
+    tr = [v / sum(d) for v in d]
 
-    # New Sorted
-    trSorted = sorted([(i + 1, tr[i]) for i in range(len(tr))],reverse=True, key=lambda x: x[1])
-    for i, x in trSorted:
-        print("page " + str(i + 1) + ": " + str(x))
+    dd = np.copy(tr)
 
-    # Old sorted
-    # for i, x in enumerate(tr):
-    #     print("page " + str(i + 1) + ": " + str(x))
-
-def todo3FromOtherGitHub():
-    q = 0.15
-    d = np.zeros([10], dtype=float)
-    d[0] = 1
-    d[1] = 1
-    tr = [v/sum(d) for v in d]
-    sq = np.copy(tr)
     for i in range(0, ITERATIONS):
-        tr = np.copy(q*sq+(1-q)*M@tr)
-    #normalise
-    tr = tr/sum(tr)
-       
+        tr = np.copy(q * dd + (1 - q) * M @ tr)
+
+    trSorted = sorted([(i + 1, tr[i]) for i in range(len(tr))], reverse=True, key=lambda x: x[1])
+    
+    for i, x in trSorted:
+        print("page " + str(i) + ": " + str(x))
+
+todo3()
 
 ### TODO 4: Repeat TODO 3 but remove the connections 3->7 and 1->5 (indexes: 2->6, 0->4) 
 ### before computing trustrank
 
+print("\nTODO3 BUT REMOVED CONNECTIONS")
+
 L[2][6] = 0
 L[0][4] = 0
+M = getM(L)
 
 todo3()

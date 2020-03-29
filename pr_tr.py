@@ -15,19 +15,20 @@ L10 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 L = np.array([L1, L2, L3, L4, L5, L6, L7, L8, L9, L10])
 
-ITERATIONS = 100
+SIZE = len(L)
+ITERATIONS = 10
 
 def getM(L):
-    M = np.zeros([10, 10], dtype=float)
+    M = np.zeros([SIZE, SIZE], dtype=float)
     # number of outgoing links
-    c = np.zeros([10], dtype=int)
+    c = np.zeros([SIZE], dtype=int)
     
     ## TODO 1 compute the stochastic matrix M
-    for i in range(0, 10):
+    for i in range(SIZE):
         c[i] = sum(L[i])
     
-    for i in range(0, 10):
-        for j in range(0, 10):
+    for i in range(SIZE):
+        for j in range(SIZE):
             if L[j][i] == 0: 
                 M[i][j] = 0
             else:
@@ -49,12 +50,15 @@ print(M)
 print("\nPAGERANK")
 
 q = 0.15
-pr = np.full(10, 1.0 / 10.0)
+v = np.full(SIZE, 1.0 / float(SIZE))
+pr = np.copy(v)
 
-for i in range(0, ITERATIONS):
-    pr = np.copy(q + (1 - q) * M @ pr)
-
-pr = pr / sum(pr)
+for k in range(ITERATIONS):
+    for i in range(SIZE):
+        pr[i] = q + (1 - q) * sum(np.multiply(M[i], v))
+    pr = np.round(pr / sum(pr), 2)   
+    v = np.copy(pr)
+    
 prSorted = sorted([(i + 1, pr[i]) for i in range(len(pr))], reverse=True, key=lambda x: x[1])
 
 for i, x in prSorted:
@@ -69,17 +73,17 @@ print("\nTRUSTRANK (DOCUMENTS 1 AND 2 ARE GOOD)")
 
 def todo3():
     q = 0.15
-    d = np.zeros([10], dtype=float)
+    d = np.zeros([SIZE], dtype=float)
     d[0] = d[1] = 1
 
-    tr = [v / sum(d) for v in d]
+    d = [v / sum(d) for v in d]
+    tr = t = np.copy(d)
 
-    dd = np.copy(tr)
-
-    for i in range(0, ITERATIONS):
-        tr = np.copy(q * dd + (1 - q) * M @ tr)
-
-    tr = tr / sum(tr)
+    for k in range(ITERATIONS):
+        for i in range(SIZE):
+            tr[i] = q + (1 - q) * sum(np.multiply(M[i], t))
+        tr = np.round(tr / sum(tr), 2)
+        t = np.copy(tr)
 
     trSorted = sorted([(i + 1, tr[i]) for i in range(len(tr))], reverse=True, key=lambda x: x[1])
     
@@ -87,7 +91,6 @@ def todo3():
         print("page " + str(i) + ": " + str(x))
 
 todo3()
-
 ### TODO 4: Repeat TODO 3 but remove the connections 3->7 and 1->5 (indexes: 2->6, 0->4) 
 ### before computing trustrank
 

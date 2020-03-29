@@ -54,8 +54,8 @@ print(M)
 print("PAGERANK")
 
 q = 0.15
-v = np.full(len(L), 1/len(L))
 pr = np.zeros([10], dtype=float)
+v = np.full(len(L), 1/len(L))
 c = np.zeros([10], dtype=int)
 
 for i in range(0, 10):
@@ -68,9 +68,14 @@ for i in range(0, 10):
             jsum += v[j] / c[j]
     pr[i] = v[i] = q + (1 - q) * jsum
 
-np.sort(pr)
+# OLD Method of sort (from index 1 to 10)
+# np.sort(pr)
+# for i, x in enumerate(pr):
+    # print("page " + str(i + 1) + ": " + str(x))
 
-for i, x in enumerate(pr):
+# NEW Method of sort (from the highest to the lowest values)
+prSorted = sorted([(i + 1, pr[i]) for i in range(len(pr))],reverse=True, key=lambda x: x[1])
+for i, x in prSorted:
     print("page " + str(i + 1) + ": " + str(x))
 
 ### TODO 3: compute trustrank with damping factor q = 0.15
@@ -84,7 +89,7 @@ def todo3():
     d[0] = d[1] = 1
     d = d / sum(d)
     tr = [v for v in d]
-    exit(1) # !!!!
+    # exit(1) # !!!!
     for i in range(0, 10):
         jsum = 0.0
         for j in range(0, 10):
@@ -95,8 +100,27 @@ def todo3():
 
     np.sort(pr)
 
-    for i, x in enumerate(tr):
+    # New Sorted
+    trSorted = sorted([(i + 1, tr[i]) for i in range(len(tr))],reverse=True, key=lambda x: x[1])
+    for i, x in trSorted:
         print("page " + str(i + 1) + ": " + str(x))
+
+    # Old sorted
+    # for i, x in enumerate(tr):
+    #     print("page " + str(i + 1) + ": " + str(x))
+
+def todo3FromOtherGitHub():
+    q = 0.15
+    d = np.zeros([10], dtype=float)
+    d[0] = 1
+    d[1] = 1
+    tr = [v/sum(d) for v in d]
+    sq = np.copy(tr)
+    for i in range(0, ITERATIONS):
+        tr = np.copy(q*sq+(1-q)*M@tr)
+    #normalise
+    tr = tr/sum(tr)
+       
 
 ### TODO 4: Repeat TODO 3 but remove the connections 3->7 and 1->5 (indexes: 2->6, 0->4) 
 ### before computing trustrank

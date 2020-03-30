@@ -81,7 +81,7 @@ def todo3():
 
     for k in range(ITERATIONS):
         for i in range(SIZE):
-            tr[i] = q + (1 - q) * sum(np.multiply(M[i], t))
+            tr[i] = q * d[i] + (1 - q) * sum(np.multiply(M[i], t))
         tr = np.round(tr / sum(tr), 2)
         t = np.copy(tr)
 

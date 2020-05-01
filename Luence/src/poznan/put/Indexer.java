@@ -17,22 +17,17 @@ import java.io.*;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class Indexer
-{
-    public static void main(String args[])
-    {
+public class Indexer {
+    public static void main(String args[]) {
         Indexer indexer = new Indexer();
         indexer.indexDocuments();
     }
 
-    private void indexDocuments()
-    {
+    private void indexDocuments() {
         // REMOVE PREVIOUSLY GENERATED INDEX (DONE)
-        try
-        {
+        try {
             FileUtils.deleteDirectory(new File(Constants.index_dir));
-        } catch (IOException ignored)
-        {
+        } catch (IOException ignored) {
         }
 
         // LOAD HTML DOCUMENTS (TODO)
@@ -55,17 +50,14 @@ public class Indexer
     }
 
 
-    private ArrayList<Document> getHTMLDocuments()
-    {
+    private ArrayList<Document> getHTMLDocuments() {
         // This method is finished. Find getHTMLDocument
         File dir = new File("pages");
         File[] files = dir.listFiles();
-        if (files != null)
-        {
+        if (files != null) {
             ArrayList<Document> htmls = new ArrayList<>(files.length);
-            for (int id = 0; id < files.length; id++)
-            {
-                System.out.println("Loading "+ files[id].getName());
+            for (int id = 0; id < files.length; id++) {
+                System.out.println("Loading " + files[id].getName());
                 // TODO finish getHTML document
                 htmls.add(getHTMLDocument("pages/" + files[id].getName(), id));
             }
@@ -74,8 +66,7 @@ public class Indexer
         return null;
     }
 
-    private Document getHTMLDocument(String path, int id)
-    {
+    private Document getHTMLDocument(String path, int id) {
         File file = new File(path);
         Document document = new Document();
 
@@ -155,16 +146,13 @@ public class Indexer
     }
 
     // (DONE)
-    private String getTextFromHTMLFile(File file)
-    {
+    private String getTextFromHTMLFile(File file) {
         BodyContentHandler handler = new BodyContentHandler();
         Metadata metadata = new Metadata();
         FileInputStream inputStream;
-        try
-        {
+        try {
             inputStream = new FileInputStream(file);
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
         }
@@ -173,11 +161,9 @@ public class Indexer
 
         //Html parser
         HtmlParser htmlparser = new HtmlParser();
-        try
-        {
+        try {
             htmlparser.parse(inputStream, handler, metadata, pContext);
-        } catch (IOException | SAXException | TikaException e)
-        {
+        } catch (IOException | SAXException | TikaException e) {
             e.printStackTrace();
         }
 

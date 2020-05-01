@@ -16,11 +16,9 @@ import org.apache.lucene.store.FSDirectory;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-public class Searcher
-{
+public class Searcher {
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         // Load the previously generated index (DONE)
         IndexReader reader = getIndexReader();
         assert reader != null;
@@ -141,17 +139,14 @@ public class Searcher
         }
 
 
-        try
-        {
+        try {
             reader.close();
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void printResultsForQuery(IndexSearcher indexSearcher, Query q)
-    {
+    private static void printResultsForQuery(IndexSearcher indexSearcher, Query q) {
         // TODO finish this method
         // - use indexSearcher to search for documents that
         // are relevant according to the query q
@@ -169,15 +164,12 @@ public class Searcher
         // --------------------------------
     }
 
-    private static IndexReader getIndexReader()
-    {
-        try
-        {
+    private static IndexReader getIndexReader() {
+        try {
             Directory dir = FSDirectory.open(Paths.get(Constants.index_dir));
             return DirectoryReader.open(dir);
 
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;

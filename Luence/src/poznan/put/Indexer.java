@@ -1,6 +1,5 @@
 package poznan.put;
 
-import opennlp.tools.parser.Cons;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
@@ -21,10 +20,14 @@ import java.util.ArrayList;
 public class Indexer {
     public static void main(String args[]) {
         Indexer indexer = new Indexer();
-        indexer.indexDocuments();
+        try {
+            indexer.indexDocuments();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void indexDocuments() {
+    private void indexDocuments() throws IOException {
         // REMOVE PREVIOUSLY GENERATED INDEX (DONE)
         try {
             FileUtils.deleteDirectory(new File(Constants.index_dir));
@@ -40,12 +43,17 @@ public class Indexer {
         //   (An Analyzer builds TokenStreams, which analyze text.
         //   It thus represents a policy for extracting index terms from text.)
         // - Then, create IndexWriterConfig object that uses standard analyzer
-        // - Construct IndexWriter (you can use FSDirectory.open and Paths.get + Constants.index_dir
+        // - Construct IndexWriter (you can use FSDirectory.open and Paths.get + poznan.put.Constants.index_dir
         // - Add documents to the index
         // - Commit and close the index.
 
         // ----------------------------------
-
+        StandardAnalyzer standardAnalyzer = new StandardAnalyzer();
+        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(standardAnalyzer);
+        IndexWriter indexWriter = new IndexWriter(FSDirectory.open(Paths.get(Constants.index_dir)),indexWriterConfig);
+        indexWriter.addDocuments(documents);
+        indexWriter.commit();
+        indexWriter.close();
         // ----------------------------------
 
     }
@@ -53,13 +61,13 @@ public class Indexer {
 
     private ArrayList<Document> getHTMLDocuments() {
         // This method is finished. Find getHTMLDocument
-        File dir = new File("pages");
+        File dir = new File("src/poznan/put/pages");
         File[] files = dir.listFiles();
         if (files != null) {
             ArrayList<Document> htmls = new ArrayList<>(files.length);
             for (int id = 0; id < files.length; id++) {
                 System.out.println("Loading " + files[id].getName());
-                htmls.add(getHTMLDocument("pages/" + files[id].getName(), id));
+                htmls.add(getHTMLDocument("src/poznan/put/pages/" + files[id].getName(), id));
             }
             return htmls;
         }
@@ -106,8 +114,8 @@ public class Indexer {
 
         // TODO create a field that is stored but not indexed
         // and contains document's id
-        // IMPORTANT NOTE: use static fields of Constants class to get
-        // the keys of the fields (e.g., Constants.id) !
+        // IMPORTANT NOTE: use static fields of poznan.put.Constants class to get
+        // the keys of the fields (e.g., poznan.put.Constants.id) !
         // ----------------------------------
         StoredField fieldId = new StoredField(Constants.id, id);
         // ----------------------------------

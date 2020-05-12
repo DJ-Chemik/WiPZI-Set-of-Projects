@@ -146,7 +146,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
    // search:
    IndexSearcher searcher = mgr.acquire(token);
    if (searcher != null) {
-     // Searcher is still here
+     // poznan.put.Searcher is still here
      try {
        // do searching...
      } finally {
@@ -155,7 +155,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
        searcher = null;
      }
    } else {
-     // Searcher was pruned -- notify user session timed
+     // poznan.put.Searcher was pruned -- notify user session timed
      // out, or, pull fresh searcher again
    }
  </pre>

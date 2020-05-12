@@ -2,13 +2,8 @@ package poznan.put;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.IntPoint;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -37,7 +32,7 @@ public class Searcher {
         // as you may notice, this word is not normalized (but is should be normalized
         // in the same way as all documents were normalized when constructing the index.
         // For that reason you can use analyzer object (utf8TOString()!).
-        // Then, build a Term object (seek in content - Constants.content) and TermQuery.
+        // Then, build a Term object (seek in content - poznan.put.Constants.content) and TermQuery.
         // Lastly, invoke printResultsForQuery.
         String queryMammal = "MaMMal";
         TermQuery tq1;

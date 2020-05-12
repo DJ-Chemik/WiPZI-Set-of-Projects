@@ -4188,7 +4188,7 @@ API Changes
   was fixed. (David Smiley)
 
 * LUCENE-5850: Made Version handling more robust and extensible. Deprecated
-  Constants.LUCENE_MAIN_VERSION, Constants.LUCENE_VERSION and current Version
+  poznan.put.Constants.LUCENE_MAIN_VERSION, poznan.put.Constants.LUCENE_VERSION and current Version
   constants of the form LUCENE_X_Y. Added version constants that include bugfix
   number of form LUCENE_X_Y_Z.  Changed Version.LUCENE_CURRENT to Version.LATEST.
   CheckIndex now prints the Lucene version used to write each segment.
@@ -6956,7 +6956,7 @@ New Features
   (Shawn Heisey, Robert Muir, Steve Rowe)
 
 * LUCENE-4590: Added WriteEnwikiLineDocTask - a benchmark task for writing
-  Wikipedia category pages and non-category pages into separate line files.
+  Wikipedia category poznan.put.pages and non-category poznan.put.pages into separate line files.
   extractWikipedia.alg was changed to use this task, so now it creates two
   files. (Doron Cohen)
 
@@ -7807,7 +7807,7 @@ Changes in backwards compatibility policy
   need to change it (e.g. using "\\" to escape '\' itself).  
   (Sunil Kamath, Terry Yang via Robert Muir)
 
-* LUCENE-2837: Collapsed Searcher, Searchable into IndexSearcher;
+* LUCENE-2837: Collapsed poznan.put.Searcher, Searchable into IndexSearcher;
   removed contrib/remote and MultiSearcher (Mike McCandless); absorbed
   ParallelMultiSearcher into IndexSearcher as an optional
   ExecutorServiced passed to its ctor.  (Mike McCandless)
@@ -8481,7 +8481,7 @@ New features
   Linux and OS X but likely other Unixes will work), and improved it
   so it can be used for indexing and searching.  The directory uses
   direct IO when doing large merges to avoid  unnecessarily evicting
-  cached IO pages due to large merges.  (Varun Thacker, Mike
+  cached IO poznan.put.pages due to large merges.  (Varun Thacker, Mike
   McCandless)
 
 * LUCENE-3827: DocsAndPositionsEnum from MemoryIndex implements
@@ -9365,7 +9365,7 @@ API Changes
   for multi-segment indexes. They were only needed for tests of
   NumericRangeQuery.  (Mike McCandless, Uwe Schindler)
 
-* LUCENE-3574: Deprecate outdated constants in org.apache.lucene.util.Constants
+* LUCENE-3574: Deprecate outdated constants in org.apache.lucene.util.poznan.put.Constants
   and add new ones for Java 6 and Java 7.  (Uwe Schindler)
 
 * LUCENE-3571: Deprecate IndexSearcher(Directory). Use the constructors
@@ -9556,8 +9556,8 @@ Changes in backwards compatibility policy
   Comparable; FieldDoc.fields also changed from Comparable[] to
   Object[] (Uwe Schindler, Mike McCandless)
 
-* LUCENE-3208: Made deprecated methods Query.weight(Searcher) and
-  Searcher.createWeight() final to prevent override. If you have
+* LUCENE-3208: Made deprecated methods Query.weight(poznan.put.Searcher) and
+  poznan.put.Searcher.createWeight() final to prevent override. If you have
   overridden one of these methods, cut over to the non-deprecated
   implementation. (Uwe Schindler, Robert Muir, Yonik Seeley)
 
@@ -9607,9 +9607,9 @@ Bug fixes
   McCandless)
 
 * LUCENE-3208: IndexSearcher had its own private similarity field
-  and corresponding get/setter overriding Searcher's implementation. If you
+  and corresponding get/setter overriding poznan.put.Searcher's implementation. If you
   setted a different Similarity instance on IndexSearcher, methods implemented
-  in the superclass Searcher were not using it, leading to strange bugs.
+  in the superclass poznan.put.Searcher were not using it, leading to strange bugs.
   (Uwe Schindler, Robert Muir)
 
 * LUCENE-3197: Fix core merge policies to not over-merge during
@@ -9883,7 +9883,7 @@ Changes in backwards compatibility policy
 * LUCENE-2804: Directory.setLockFactory new declares throwing an IOException.
   (Shai Erera, Robert Muir)
 
-* LUCENE-2837: Added deprecations noting that in 4.0, Searcher and
+* LUCENE-2837: Added deprecations noting that in 4.0, poznan.put.Searcher and
   Searchable are collapsed into IndexSearcher; contrib/remote and
   MultiSearcher have been removed.  (Mike McCandless)
 
@@ -11173,7 +11173,7 @@ Bug fixes
    cannot exceed 2048 MB, and throw IllegalArgumentException if it
    does.  (Aaron McKee, Yonik Seeley, Mike McCandless)
 
- * LUCENE-2004: Fix Constants.LUCENE_MAIN_VERSION to not be inlined
+ * LUCENE-2004: Fix poznan.put.Constants.LUCENE_MAIN_VERSION to not be inlined
    by client code.  (Uwe Schindler)
 
  * LUCENE-2016: Replace illegal U+FFFF character with the replacement
@@ -11205,7 +11205,7 @@ Documentation
  * LUCENE-1955: Fix Hits deprecation notice to point users in right
    direction. (Mike McCandless, Mark Miller)
    
- * Fix javadoc about score tracking done by search methods in Searcher 
+ * Fix javadoc about score tracking done by search methods in poznan.put.Searcher
    and IndexSearcher.  (Mike McCandless)
 
  * LUCENE-2008: Javadoc improvements for TokenStream/Tokenizer/Token
@@ -11239,9 +11239,9 @@ Changes in backwards compatibility policy
     directly instantiate TopFieldCollector.
 
     Also, the method search(Weight, Filter, Collector) was added to
-    the Searchable interface and the Searcher abstract class to
+    the Searchable interface and the poznan.put.Searcher abstract class to
     replace the deprecated HitCollector versions.  If you either
-    implement Searchable or extend Searcher, you should change your
+    implement Searchable or extend poznan.put.Searcher, you should change your
     code to implement this method.  If you already extend
     IndexSearcher, no further changes are needed to use Collector.
     
@@ -11271,7 +11271,7 @@ Changes in backwards compatibility policy
     Going forward Searchable will be kept for convenience only and may
     be changed between minor releases without any deprecation
     process. It is not recommended that you implement it, but rather extend
-    Searcher.  
+    poznan.put.Searcher.
     (Shai Erera, Chris Hostetter, Martin Ruckli, Mark Miller via Mike McCandless)
 
  * LUCENE-1422, LUCENE-1693: The new Attribute based TokenStream API (see below)
@@ -11401,7 +11401,7 @@ Changes in runtime behavior
  * LUCENE-1483: When searching over multiple segments, a new Scorer is now created 
     for each segment. Searching has been telescoped out a level and IndexSearcher now
     operates much like MultiSearcher does. The Weight is created only once for the top 
-    level Searcher, but each Scorer is passed a per-segment IndexReader. This will 
+    level poznan.put.Searcher, but each Scorer is passed a per-segment IndexReader. This will
     result in doc ids in the Scorer being internal to the per-segment IndexReader. It 
     has always been outside of the API to count on a given IndexReader to contain every 
     doc id in the index - and if you have been ignoring MultiSearcher in your custom code 
@@ -12347,7 +12347,7 @@ API Changes
     which only allows a single thread to read from an open file at a
     time.  (Jason Rutherglen via Mike McCandless)
 
-22. LUCENE-1371: Added convenience method TopDocs Searcher.search(Query query, int n).
+22. LUCENE-1371: Added convenience method TopDocs poznan.put.Searcher.search(Query query, int n).
     (Mike McCandless)
     
 23. LUCENE-1356: Allow easy extensions of TopDocCollector by turning
@@ -14497,7 +14497,7 @@ Infrastructure
 
  5. Added support for hit sorting.  Results may now be sorted by any
     indexed field.  For details see the javadoc for
-    Searcher#search(Query, Sort).  (Tim Jones via Cutting)
+    poznan.put.Searcher#search(Query, Sort).  (Tim Jones via Cutting)
 
  6. Changed FSDirectory to auto-create a full directory tree that it
     needs by using mkdirs() instead of mkdir().  (Mladen Turk via Otis)
@@ -14505,10 +14505,10 @@ Infrastructure
  7. Added a new span-based query API.  This implements, among other
     things, nested phrases.  See javadocs for details.  (Doug Cutting)
 
- 8. Added new method Query.getSimilarity(Searcher), and changed
+ 8. Added new method Query.getSimilarity(poznan.put.Searcher), and changed
     scorers to use it.  This permits one to subclass a Query class so
     that it can specify its own Similarity implementation, perhaps
-    one that delegates through that of the Searcher.  (Julien Nioche
+    one that delegates through that of the poznan.put.Searcher.  (Julien Nioche
     via Cutting)
 
  9. Added MultiReader, an IndexReader that combines multiple other
@@ -14836,7 +14836,7 @@ Infrastructure
  5. Added throwing exception if FSDirectory could not create directory
     - Bug #6914 (Eugene Gluzberg via otis)
 
- 6. Update MultiSearcher, MultiFieldParse, Constants, DateFilter,
+ 6. Update MultiSearcher, MultiFieldParse, poznan.put.Constants, DateFilter,
     LowerCaseTokenizer javadoc (otis)
 
  7. Added fix to avoid NullPointerException in results.jsp

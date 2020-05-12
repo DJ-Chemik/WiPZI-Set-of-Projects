@@ -4418,7 +4418,7 @@ CoveredBy. The area requirement on the predicates was removed, and Overlaps' def
 was fixed.
 <br /><span class="attrib">(David Smiley)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-5850">LUCENE-5850</a>: Made Version handling more robust and extensible. Deprecated
-Constants.LUCENE_MAIN_VERSION, Constants.LUCENE_VERSION and current Version
+poznan.put.Constants.LUCENE_MAIN_VERSION, poznan.put.Constants.LUCENE_VERSION and current Version
 constants of the form LUCENE_X_Y. Added version constants that include bugfix
 number of form LUCENE_X_Y_Z.  Changed Version.LUCENE_CURRENT to Version.LATEST.
 CheckIndex now prints the Lucene version used to write each segment.
@@ -7235,7 +7235,7 @@ Erera, Mike McCandless)</span></li>
 rule files in the ICU RuleBasedBreakIterator format.
 <br /><span class="attrib">(Shawn Heisey, Robert Muir, Steve Rowe)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-4590">LUCENE-4590</a>: Added WriteEnwikiLineDocTask - a benchmark task for writing
-Wikipedia category pages and non-category pages into separate line files.
+Wikipedia category poznan.put.pages and non-category poznan.put.pages into separate line files.
 extractWikipedia.alg was changed to use this task, so now it creates two
 files.
 <br /><span class="attrib">(Doron Cohen)</span></li>
@@ -8096,7 +8096,7 @@ the '\' character. Previously this was impossible (you could not escape */?,
 for example).  If your code somehow depends on the old behavior, you will
 need to change it (e.g. using "\\" to escape '\' itself).
 <br /><span class="attrib">(Sunil Kamath, Terry Yang via Robert Muir)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2837">LUCENE-2837</a>: Collapsed Searcher, Searchable into IndexSearcher;
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2837">LUCENE-2837</a>: Collapsed poznan.put.Searcher, Searchable into IndexSearcher;
 removed contrib/remote and MultiSearcher (Mike McCandless); absorbed
 ParallelMultiSearcher into IndexSearcher as an optional
 ExecutorServiced passed to its ctor.
@@ -8785,7 +8785,7 @@ unix supporting the O_DIRECT flag when opening a file (tested on
 Linux and OS X but likely other Unixes will work), and improved it
 so it can be used for indexing and searching.  The directory uses
 direct IO when doing large merges to avoid  unnecessarily evicting
-cached IO pages due to large merges.
+cached IO poznan.put.pages due to large merges.
 <br /><span class="attrib">(Varun Thacker, Mike
 McCandless)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-3827">LUCENE-3827</a>: DocsAndPositionsEnum from MemoryIndex implements
@@ -9783,7 +9783,7 @@ related methods], as the numbers returned are not useful
 for multi-segment indexes. They were only needed for tests of
 NumericRangeQuery.
 <br /><span class="attrib">(Mike McCandless, Uwe Schindler)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-3574">LUCENE-3574</a>: Deprecate outdated constants in org.apache.lucene.util.Constants
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-3574">LUCENE-3574</a>: Deprecate outdated constants in org.apache.lucene.util.poznan.put.Constants
 and add new ones for Java 6 and Java 7.
 <br /><span class="attrib">(Uwe Schindler)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-3571">LUCENE-3571</a>: Deprecate IndexSearcher(Directory). Use the constructors
@@ -9991,8 +9991,8 @@ Mike McCandless)</span></li>
 Comparable; FieldDoc.fields also changed from Comparable[] to
 Object[]
 <br /><span class="attrib">(Uwe Schindler, Mike McCandless)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-3208">LUCENE-3208</a>: Made deprecated methods Query.weight(Searcher) and
-Searcher.createWeight() final to prevent override. If you have
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-3208">LUCENE-3208</a>: Made deprecated methods Query.weight(poznan.put.Searcher) and
+poznan.put.Searcher.createWeight() final to prevent override. If you have
 overridden one of these methods, cut over to the non-deprecated
 implementation.
 <br /><span class="attrib">(Uwe Schindler, Robert Muir, Yonik Seeley)</span></li>
@@ -10044,9 +10044,9 @@ ArrayIndexOutOfBoundsException
 <br /><span class="attrib">(selckin, Robert Muir, Mike
 McCandless)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-3208">LUCENE-3208</a>: IndexSearcher had its own private similarity field
-and corresponding get/setter overriding Searcher's implementation. If you
+and corresponding get/setter overriding poznan.put.Searcher's implementation. If you
 setted a different Similarity instance on IndexSearcher, methods implemented
-in the superclass Searcher were not using it, leading to strange bugs.
+in the superclass poznan.put.Searcher were not using it, leading to strange bugs.
 <br /><span class="attrib">(Uwe Schindler, Robert Muir)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-3197">LUCENE-3197</a>: Fix core merge policies to not over-merge during
 background optimize when documents are still being deleted
@@ -10329,7 +10329,7 @@ fields, reindex is recommended.
 <br /><span class="attrib">(David Smiley, Koji Sekiguchi)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-2804">LUCENE-2804</a>: Directory.setLockFactory new declares throwing an IOException.
 <br /><span class="attrib">(Shai Erera, Robert Muir)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2837">LUCENE-2837</a>: Added deprecations noting that in 4.0, Searcher and
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2837">LUCENE-2837</a>: Added deprecations noting that in 4.0, poznan.put.Searcher and
 Searchable are collapsed into IndexSearcher; contrib/remote and
 MultiSearcher have been removed.
 <br /><span class="attrib">(Mike McCandless)</span></li>
@@ -11705,7 +11705,7 @@ exception occurs during sync
 cannot exceed 2048 MB, and throw IllegalArgumentException if it
 does.
 <br /><span class="attrib">(Aaron McKee, Yonik Seeley, Mike McCandless)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2004">LUCENE-2004</a>: Fix Constants.LUCENE_MAIN_VERSION to not be inlined
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-2004">LUCENE-2004</a>: Fix poznan.put.Constants.LUCENE_MAIN_VERSION to not be inlined
 by client code.
 <br /><span class="attrib">(Uwe Schindler)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-2016">LUCENE-2016</a>: Replace illegal U+FFFF character with the replacement
@@ -11739,7 +11739,7 @@ when sorting by field.
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-1955">LUCENE-1955</a>: Fix Hits deprecation notice to point users in right
 direction.
 <br /><span class="attrib">(Mike McCandless, Mark Miller)</span></li>
-      <li>Fix javadoc about score tracking done by search methods in Searcher
+      <li>Fix javadoc about score tracking done by search methods in poznan.put.Searcher
 and IndexSearcher.
 <br /><span class="attrib">(Mike McCandless)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-2008">LUCENE-2008</a>: Javadoc improvements for TokenStream/Tokenizer/Token
@@ -11774,9 +11774,9 @@ and IndexSearcher.
  directly instantiate TopFieldCollector.
 <p/>
  Also, the method search(Weight, Filter, Collector) was added to
- the Searchable interface and the Searcher abstract class to
+ the Searchable interface and the poznan.put.Searcher abstract class to
  replace the deprecated HitCollector versions.  If you either
- implement Searchable or extend Searcher, you should change your
+ implement Searchable or extend poznan.put.Searcher, you should change your
  code to implement this method.  If you already extend
  IndexSearcher, no further changes are needed to use Collector.
 <p/>
@@ -11806,7 +11806,7 @@ and IndexSearcher.
  Going forward Searchable will be kept for convenience only and may
  be changed between minor releases without any deprecation
  process. It is not recommended that you implement it, but rather extend
- Searcher.
+ poznan.put.Searcher.
 <br /><span class="attrib">(Shai Erera, Chris Hostetter, Martin Ruckli, Mark Miller via Mike McCandless)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-1422">LUCENE-1422</a>, <a href="http://issues.apache.org/jira/browse/LUCENE-1693">LUCENE-1693</a>: The new Attribute based TokenStream API (see below)
  has some backwards breaks in rare cases. We did our best to make the
@@ -11933,7 +11933,7 @@ and IndexSearcher.
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-1483">LUCENE-1483</a>: When searching over multiple segments, a new Scorer is now created
  for each segment. Searching has been telescoped out a level and IndexSearcher now
  operates much like MultiSearcher does. The Weight is created only once for the top
- level Searcher, but each Scorer is passed a per-segment IndexReader. This will
+ level poznan.put.Searcher, but each Scorer is passed a per-segment IndexReader. This will
  result in doc ids in the Scorer being internal to the per-segment IndexReader. It
  has always been outside of the API to count on a given IndexReader to contain every
  doc id in the index - and if you have been ignoring MultiSearcher in your custom code
@@ -12864,7 +12864,7 @@ improvement to query throughput when compared to FSDirectory,
 which only allows a single thread to read from an open file at a
 time.
 <br /><span class="attrib">(Jason Rutherglen via Mike McCandless)</span></li>
-      <li><a href="http://issues.apache.org/jira/browse/LUCENE-1371">LUCENE-1371</a>: Added convenience method TopDocs Searcher.search(Query query, int n).
+      <li><a href="http://issues.apache.org/jira/browse/LUCENE-1371">LUCENE-1371</a>: Added convenience method TopDocs poznan.put.Searcher.search(Query query, int n).
 <br /><span class="attrib">(Mike McCandless)</span></li>
       <li><a href="http://issues.apache.org/jira/browse/LUCENE-1356">LUCENE-1356</a>: Allow easy extensions of TopDocCollector by turning
 constructor and fields from package to protected.
@@ -14948,7 +14948,7 @@ search systems.
 <br /><span class="attrib">(Jean-Francois Halleux via cutting)</span></li>
       <li>Added support for hit sorting.  Results may now be sorted by any
 indexed field.  For details see the javadoc for
-Searcher#search(Query, Sort).
+poznan.put.Searcher#search(Query, Sort).
 <br /><span class="attrib">(Tim Jones via Cutting)</span></li>
       <li>Changed FSDirectory to auto-create a full directory tree that it
 needs by using mkdirs() instead of mkdir().
@@ -14956,10 +14956,10 @@ needs by using mkdirs() instead of mkdir().
       <li>Added a new span-based query API.  This implements, among other
 things, nested phrases.  See javadocs for details.
 <br /><span class="attrib">(Doug Cutting)</span></li>
-      <li>Added new method Query.getSimilarity(Searcher), and changed
+      <li>Added new method Query.getSimilarity(poznan.put.Searcher), and changed
 scorers to use it.  This permits one to subclass a Query class so
 that it can specify its own Similarity implementation, perhaps
-one that delegates through that of the Searcher.
+one that delegates through that of the poznan.put.Searcher.
 <br /><span class="attrib">(Julien Nioche
 via Cutting)</span></li>
       <li>Added MultiReader, an IndexReader that combines multiple other
@@ -15281,7 +15281,7 @@ brings the build process closer to Scarab's build process.
 <br /><span class="attrib">(Eugene Gluzberg via otis)</span></li>
 </ul>
 </li>
-      <li>Update MultiSearcher, MultiFieldParse, Constants, DateFilter,
+      <li>Update MultiSearcher, MultiFieldParse, poznan.put.Constants, DateFilter,
 LowerCaseTokenizer javadoc
 <br /><span class="attrib">(otis)</span></li>
       <li>Added fix to avoid NullPointerException in results.jsp

@@ -144,7 +144,7 @@ have to compile on your platform.
 <a href="org/apache/lucene/store/NativeUnixDirectory.html" title="class in org.apache.lucene.store"><code>NativeUnixDirectory</code></a> is a Directory implementation that bypasses the
 OS's buffer cache (using direct IO) for any IndexInput and IndexOutput
 used during merging of segments larger than a specified size (default
-10 MB).  This avoids evicting hot pages that are still in-use for
+10 MB).  This avoids evicting hot poznan.put.pages that are still in-use for
 searching, keeping search more responsive while large merges run.
 
 <p>

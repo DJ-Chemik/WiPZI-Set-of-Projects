@@ -1,5 +1,6 @@
 package poznan.put;
 
+import opennlp.tools.parser.Cons;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
@@ -58,7 +59,6 @@ public class Indexer {
             ArrayList<Document> htmls = new ArrayList<>(files.length);
             for (int id = 0; id < files.length; id++) {
                 System.out.println("Loading " + files[id].getName());
-                // TODO finish getHTML document
                 htmls.add(getHTMLDocument("pages/" + files[id].getName(), id));
             }
             return htmls;
@@ -75,10 +75,12 @@ public class Indexer {
 
         TextField: Reader or String indexed for full-text search
         StringField: String indexed verbatim as a single token
+
         IntPoint: int indexed for exact/range queries.
         LongPoint: long indexed for exact/range queries.
         FloatPoint: float indexed for exact/range queries.
         DoublePoint: double indexed for exact/range queries.
+
         SortedDocValuesField: byte[] indexed column-wise for sorting/faceting
         SortedSetDocValuesField: SortedSet<byte[]> indexed column-wise for sorting/faceting
         NumericDocValuesField: long indexed column-wise for sorting/faceting
@@ -107,7 +109,7 @@ public class Indexer {
         // IMPORTANT NOTE: use static fields of Constants class to get
         // the keys of the fields (e.g., Constants.id) !
         // ----------------------------------
-
+        StoredField fieldId = new StoredField(Constants.id, id);
         // ----------------------------------
 
         // TODO create a field that is indexed but not stored
@@ -115,29 +117,33 @@ public class Indexer {
         // for this purpose, extract text from the document
         // using Tika ( use getTextFromHTMLFile() <- this method is finished )
         // ----------------------------------
-
+        TextField fieldContent = new TextField(Constants.content, getTextFromHTMLFile(file), Field.Store.NO);
         // ----------------------------------
 
         // TODO create a field that is stored and indexed
         // and contains file name
         // ----------------------------------
-
+        TextField fieldFileName = new TextField(Constants.filename, file.getName(), Field.Store.YES);
         // ----------------------------------
 
         // TODO create an INT field (IntPoint) that is indexed
         // and contains file size (bytes, .length())
         // ----------------------------------
-
+        IntPoint fieldSize = new IntPoint(Constants.filesize_int, (int)file.length());
         // ----------------------------------
         // //TODO IntPoint is not stored but we want to a file size
         // ... so add another field (StoredField) that stores file size
         // ----------------------------------
-
+        StoredField fieldSizeStored = new StoredField(Constants.filesize, file.length());
         // ----------------------------------
 
         // TODO add fields to the document object
         // ----------------------------------
-
+        document.add(fieldId);
+        document.add(fieldContent);
+        document.add(fieldFileName);
+        document.add(fieldSize);
+        document.add(fieldSizeStored);
         // ----------------------------------
 
 

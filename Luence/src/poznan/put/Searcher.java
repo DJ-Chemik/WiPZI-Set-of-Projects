@@ -1,10 +1,16 @@
 package poznan.put;
 
+import opennlp.tools.parser.Cons;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
+import org.apache.lucene.document.IntPoint;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.queryparser.xml.builders.RangeQueryBuilder;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -14,7 +20,7 @@ import java.nio.file.Paths;
 
 public class Searcher {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException, ParseException {
         // Load the previously generated index (DONE)
         IndexReader reader = getIndexReader();
         assert reader != null;
@@ -41,7 +47,10 @@ public class Searcher {
             // --------------------------------------
             // COMPLETE THE CODE HERE
             System.out.println("1) term query: mammal (CONTENT)");
-
+            queryMammal = analyzer.normalize(Constants.content, queryMammal).utf8ToString();
+            Term term = new Term(Constants.content, queryMammal);
+            tq1 = new TermQuery(term);
+            printResultsForQuery(indexSearcher, tq1);
             // --------------------------------------
         }
 
@@ -52,7 +61,10 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("2) term query bird (CONTENT)");
-
+            queryBird = analyzer.normalize(Constants.content, queryMammal).utf8ToString();
+            Term term = new Term(Constants.content, queryBird);
+            tq2 = new TermQuery(term);
+            printResultsForQuery(indexSearcher, tq2);
             // --------------------------------------
         }
 
@@ -67,7 +79,14 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("3) boolean query (CONTENT): mammal or bird");
-
+            BooleanClause clauseMammal = new BooleanClause(tq1, BooleanClause.Occur.SHOULD);
+            BooleanClause clauseBird = new BooleanClause(tq2, BooleanClause.Occur.SHOULD);
+            BooleanQuery.Builder builder = new BooleanQuery.Builder();
+            builder.add(clauseMammal);
+            builder.add(clauseBird);
+            builder.setMinimumNumberShouldMatch(1);
+            BooleanQuery booleanQuery = builder.build();
+            printResultsForQuery(indexSearcher,booleanQuery);
             // --------------------------------------
         }
 
@@ -77,7 +96,8 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("4) range query: file size in [0b, 1000b]");
-
+            Query rangeQuery = IntPoint.newRangeQuery(Constants.filesize,0,1000);
+            printResultsForQuery(indexSearcher, rangeQuery);
             // --------------------------------------
         }
 
@@ -86,6 +106,8 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("5) Prefix query (FILENAME): ant");
+            PrefixQuery prefixQuery = new PrefixQuery(new Term(Constants.filename, "ant"));
+            printResultsForQuery(indexSearcher,prefixQuery);
 
             // --------------------------------------
         }
@@ -96,6 +118,8 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("6) Wildcard query (CONTENT): eat?");
+            WildcardQuery wildcardQuery = new WildcardQuery(new Term(Constants.content,"eat?"));
+            printResultsForQuery(indexSearcher, wildcardQuery);
 
             // --------------------------------------
         }
@@ -106,6 +130,8 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("7) Fuzzy querry (CONTENT): mamml?");
+            FuzzyQuery fuzzyQuery = new FuzzyQuery(new Term(Constants.content, "mamml"));
+            printResultsForQuery(indexSearcher,fuzzyQuery);
 
             // --------------------------------------
         }
@@ -130,6 +156,9 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("8) query parser = " + selectedQuery);
+            QueryParser queryParser = new QueryParser(Constants.content,analyzer);
+            Query query = queryParser.parse(selectedQuery);
+            printResultsForQuery(indexSearcher,query);
 
             // --------------------------------------
         }

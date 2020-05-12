@@ -2,6 +2,7 @@ package poznan.put;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.search.*;
@@ -141,7 +142,7 @@ public class Searcher {
         }
     }
 
-    private static void printResultsForQuery(IndexSearcher indexSearcher, Query q) {
+    private static void printResultsForQuery(IndexSearcher indexSearcher, Query q) throws IOException {
         // TODO finish this method
         // - use indexSearcher to search for documents that
         // are relevant according to the query q
@@ -155,6 +156,15 @@ public class Searcher {
         // and use document.get(name of the field) to get the value of id, filename, etc.
 
         // --------------------------------
+        TopDocs topDocs;
+        topDocs = indexSearcher.search(q, Constants.top_docs);
+        for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
+            Document document = indexSearcher.doc(scoreDoc.doc);
+            String id = document.get(Constants.id);
+            String content = document.get(Constants.content);
+            String size = document.get(Constants.filesize);
+            System.out.println("SCORE: FILENAME (Id= " + id + ")(Content=" + content + ") (Size=" + size + ")");
+        }
 
         // --------------------------------
     }

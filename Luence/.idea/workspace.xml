@@ -2,143 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce4d2a5-41fa-4add-a907-885626432eab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/CHANGES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/CHANGES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/benchmark/README.enwiki" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/benchmark/README.enwiki" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-common/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-common/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-icu/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-icu/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/org/apache/lucene/analysis/ja/JapaneseTokenizer.Mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/org/apache/lucene/analysis/ja/JapaneseTokenizer.Mode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/org/apache/lucene/analysis/ja/JapaneseTokenizer.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-kuromoji/org/apache/lucene/analysis/ja/JapaneseTokenizer.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-morfologik/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-morfologik/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-phonetic/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-phonetic/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-smartcn/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-smartcn/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-stempel/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-stempel/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-uima/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/analyzers-uima/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/backward-codecs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/backward-codecs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/backward-codecs/org/apache/lucene/codecs/lucene54/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/backward-codecs/org/apache/lucene/codecs/lucene54/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/Constants.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/Constants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/feeds/TrecDocParser.ParsePathType.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/feeds/TrecDocParser.ParsePathType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/NewCollationAnalyzerTask.Implementation.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/NewCollationAnalyzerTask.Implementation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/WriteEnwikiLineDocTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/WriteEnwikiLineDocTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/class-use/PerfTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/class-use/PerfTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/class-use/WriteLineDocTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/class-use/WriteLineDocTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/tasks/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/utils/StreamUtils.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/byTask/utils/StreamUtils.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/class-use/Constants.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/class-use/Constants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/org/apache/lucene/benchmark/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/benchmark/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/changes/Changes.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/changes/Changes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/classification/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/classification/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/codecs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/codecs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/codecs/org/apache/lucene/codecs/bloom/FuzzySet.ContainsResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/codecs/org/apache/lucene/codecs/bloom/FuzzySet.ContainsResult.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/codecs/lucene50/Lucene50StoredFieldsFormat.Mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/codecs/lucene50/Lucene50StoredFieldsFormat.Mode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/codecs/lucene70/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/codecs/lucene70/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/document/DateTools.Resolution.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/document/DateTools.Resolution.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/document/Field.Store.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/document/Field.Store.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/DocValuesType.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/DocValuesType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/FilteredTermsEnum.AcceptStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/FilteredTermsEnum.AcceptStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/IndexOptions.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/IndexOptions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/IndexWriterConfig.OpenMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/IndexWriterConfig.OpenMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/MergePolicy.OneMergeProgress.PauseReason.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/MergePolicy.OneMergeProgress.PauseReason.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/MergeTrigger.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/MergeTrigger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/PointValues.Relation.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/PointValues.Relation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/StoredFieldVisitor.Status.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/StoredFieldVisitor.Status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/TermsEnum.SeekStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/index/TermsEnum.SeekStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/BooleanClause.Occur.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/BooleanClause.Occur.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.PruneByAge.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.PruneByAge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.Pruner.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.Pruner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SearcherLifetimeManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortField.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortField.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortedNumericSelector.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortedNumericSelector.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortedSetSelector.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/SortedSetSelector.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/spans/FilterSpans.AcceptStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/spans/FilterSpans.AcceptStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/spans/SpanWeight.Postings.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/search/spans/SpanWeight.Postings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/IOContext.Context.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/IOContext.Context.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/MMapDirectory.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/MMapDirectory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/class-use/DataInput.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/store/class-use/DataInput.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/CommandLineUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/CommandLineUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/Constants.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/Constants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/Counter.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/Counter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/PagedBytes.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/PagedBytes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/automaton/CompiledAutomaton.AUTOMATON_TYPE.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/automaton/CompiledAutomaton.AUTOMATON_TYPE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/class-use/Accountable.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/class-use/Accountable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/class-use/Constants.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/class-use/Constants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/Builder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/FST.INPUT_TYPE.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/FST.INPUT_TYPE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/FST.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/FST.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/class-use/Outputs.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/fst/class-use/Outputs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/packed/PackedInts.Format.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/org/apache/lucene/util/packed/PackedInts.Format.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/core/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/org/apache/lucene/demo/SearchFiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/org/apache/lucene/demo/SearchFiles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/src-html/org/apache/lucene/demo/SearchFiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/demo/src-html/org/apache/lucene/demo/SearchFiles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/expressions/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/expressions/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/expressions/org/apache/lucene/expressions/js/VariableContext.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/expressions/org/apache/lucene/expressions/js/VariableContext.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/org/apache/lucene/facet/taxonomy/CachedOrdinalsReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/org/apache/lucene/facet/taxonomy/CachedOrdinalsReader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/org/apache/lucene/facet/taxonomy/writercache/LruTaxonomyWriterCache.LRUType.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/facet/org/apache/lucene/facet/taxonomy/writercache/LruTaxonomyWriterCache.LRUType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/org/apache/lucene/search/grouping/GroupSelector.State.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/org/apache/lucene/search/grouping/GroupSelector.State.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/org/apache/lucene/search/grouping/TopGroups.ScoreMergeMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/grouping/org/apache/lucene/search/grouping/TopGroups.ScoreMergeMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/Formatter.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/Formatter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/highlight/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/uhighlight/UnifiedHighlighter.HighlightFlag.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/uhighlight/UnifiedHighlighter.HighlightFlag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/uhighlight/UnifiedHighlighter.OffsetSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/org/apache/lucene/search/uhighlight/UnifiedHighlighter.OffsetSource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/highlighter/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/org/apache/lucene/search/join/BlockJoinSelector.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/org/apache/lucene/search/join/BlockJoinSelector.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/org/apache/lucene/search/join/ScoreMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/join/org/apache/lucene/search/join/ScoreMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/memory/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/memory/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/misc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/misc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/misc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/misc/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queries/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queries/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/ParseException.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/ParseException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/QueryParser.Operator.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/QueryParser.Operator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/Token.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/classic/Token.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/nodes/ModifierQueryNode.Modifier.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/nodes/ModifierQueryNode.Modifier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/nodes/ProximityQueryNode.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/nodes/ProximityQueryNode.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/parser/EscapeQuerySyntax.Type.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/core/parser/EscapeQuerySyntax.Type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/config/StandardQueryConfigHandler.Operator.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/config/StandardQueryConfigHandler.Operator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/parser/ParseException.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/parser/ParseException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/parser/Token.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/flexible/standard/parser/Token.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/surround/parser/ParseException.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/surround/parser/ParseException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/surround/parser/Token.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/org/apache/lucene/queryparser/surround/parser/Token.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/queryparser/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/replicator/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/replicator/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/replicator/org/apache/lucene/replicator/http/ReplicationService.ReplicationAction.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/replicator/org/apache/lucene/replicator/http/ReplicationService.ReplicationAction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/sandbox/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/sandbox/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial-extras/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial-extras/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial3d/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/spatial3d/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/spell/SuggestMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/spell/SuggestMode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/spell/WordBreakSpellChecker.BreakSuggestionSortMethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/spell/WordBreakSpellChecker.BreakSuggestionSortMethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/suggest/analyzing/BlendedInfixSuggester.BlenderType.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/suggest/org/apache/lucene/search/suggest/analyzing/BlendedInfixSuggester.BlenderType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/index/BaseTermVectorsFormatTestCase.Options.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/index/BaseTermVectorsFormatTestCase.Options.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/index/RandomPostingsTester.Option.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/index/RandomPostingsTester.Option.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/search/BaseRangeFieldQueryTestCase.Range.QueryType.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/search/BaseRangeFieldQueryTestCase.Range.QueryType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/search/CheckHits.ExplanationAsserter.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/search/CheckHits.ExplanationAsserter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/store/MockDirectoryWrapper.Throttling.html" beforeDir="false" afterPath="$PROJECT_DIR$/lucene-7.2.1/lucene-7.2.1/docs/test-framework/org/apache/lucene/store/MockDirectoryWrapper.Throttling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/poznan/put/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poznan/put/Indexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/poznan/put/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poznan/put/Searcher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -191,12 +54,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="496" />
+          <entry key="java" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="496" />
+          <entry key="JAVA" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -226,23 +89,26 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/poznan/put/Searcher.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+                <state relative-caret-position="306">
+                  <caret line="144" column="102" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="method#main#0;class#Searcher#0" />
+                    <element signature="method#printResultsForQuery#0;class#Searcher#0" />
+                    <element signature="method#getIndexReader#0;class#Searcher#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/poznan/put/Indexer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+                <state relative-caret-position="326">
+                  <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#getTextFromHTMLFile#0;class#Indexer#0" />
@@ -282,9 +148,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/poznan/put/Constants.java" />
-        <option value="$PROJECT_DIR$/src/poznan/put/Searcher.java" />
         <option value="$PROJECT_DIR$/src/Indexer.java" />
         <option value="$PROJECT_DIR$/src/poznan/put/Indexer.java" />
+        <option value="$PROJECT_DIR$/src/poznan/put/Searcher.java" />
       </list>
     </option>
   </component>
@@ -327,7 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589314388294" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589316893309" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -435,14 +301,14 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18839428" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18839428" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -489,18 +355,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/poznan/put/Indexer.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Materials/Constants.java" />
     <entry file="file://$PROJECT_DIR$/src/poznan/put/pages/Ant.html">
@@ -514,16 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/poznan/put/Searcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/poznan/put/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -533,11 +377,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/poznan/put/Indexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+        <state relative-caret-position="326">
+          <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getTextFromHTMLFile#0;class#Indexer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poznan/put/Searcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="144" column="102" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Searcher#0" />
+            <element signature="method#printResultsForQuery#0;class#Searcher#0" />
+            <element signature="method#getIndexReader#0;class#Searcher#0" />
           </folding>
         </state>
       </provider>

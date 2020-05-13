@@ -96,7 +96,7 @@ public class Searcher {
         {
             // --------------------------------------
             System.out.println("4) range query: file size in [0b, 1000b]");
-            Query rangeQuery = IntPoint.newRangeQuery(Constants.filesize,0,1000);
+            Query rangeQuery = IntPoint.newRangeQuery(Constants.filesize_int,0,1000);
             printResultsForQuery(indexSearcher, rangeQuery);
             // --------------------------------------
         }
@@ -189,10 +189,11 @@ public class Searcher {
         topDocs = indexSearcher.search(q, Constants.top_docs);
         for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
             Document document = indexSearcher.doc(scoreDoc.doc);
+            String name = document.get(Constants.filename);
             String id = document.get(Constants.id);
             String content = document.get(Constants.content);
             String size = document.get(Constants.filesize);
-            System.out.println("SCORE: FILENAME (Id= " + id + ")(Content=" + content + ") (Size=" + size + ")");
+            System.out.println("SCORE: "+ name +" (Id= " + id + ")(Content=" + content + ") (Size=" + size + ")");
         }
 
         // --------------------------------
